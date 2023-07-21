@@ -17,5 +17,7 @@ This program is a simple contract written in Solidity, a programming language us
 6. compile the file and deploy.   
 
 # Authors
- Metacrafter Chris , Nilesh Sharma 
- @metacraftersio   , @nileshsharma5661@gmail.com
+
+ Metacrafter Chris , @metacraftersio   
+ 
+ Nilesh Sharma ,@nileshsharma5661@gmail.com
