@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-contract MyFirstToken {
+contract Erc20Token {
 
     string public TkName;
     string public TkSymbol;
+    address public TkOwner;
     uint256 public TotalSupply;
 
 
@@ -19,13 +20,16 @@ contract MyFirstToken {
     constructor(string memory _EnterTkname, string memory _EnterTksymbol) {
         TkName = _EnterTkname;
         TkSymbol = _EnterTksymbol;
+        TkOwner = msg.sender;
         TotalSupply = 0;
     }
 
 
     function mint(address to, uint value) public  {
     
+        require(msg.sender == TkOwner, "Only Contract Owner can mint Tokens");
         require(value > 0, "Please Enter a valid Amount");
+
 
         TotalSupply += value;
         balanceOf[to] += value;
